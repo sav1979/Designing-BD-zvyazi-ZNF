@@ -8,7 +8,7 @@ create table if not exists List albums (
 	executors id varchar(40) not null, 
 	album id primary key varchar(40) unique references name collection,
 	album name primary key text unique references List repertoire,
-	year of release date
+	year of release integer not null
 );
 
 create table if not exists List tracks (
@@ -40,5 +40,5 @@ create table if not exists name collection (
 create table if not exists collection (
 	collection id varchar(40) not null,
 	name collection text not null,
-	year collection date not null 
+	year collection integer not null 
 	);
